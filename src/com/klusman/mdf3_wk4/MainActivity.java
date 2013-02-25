@@ -14,13 +14,11 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         
         
-        WebView myWebView = (WebView) findViewById(R.id.webview);
-        myWebView.loadUrl("file:///android_assets/mdf3test.html");
-        WebSettings webSettings = myWebView.getSettings();
+        WebView webview = (WebView) findViewById(R.id.webview);    
+        WebSettings webSettings = webview.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        myWebView.addJavascriptInterface(new WebAppInterface(this), "Android");
-        
-        
+        webview.loadUrl("file:///android_asset/index.html");
+        webview.addJavascriptInterface(new WebAppInterface(this), "Android");
         
     }
 

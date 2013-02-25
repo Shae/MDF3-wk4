@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+
+<!-- Shae Klusman -->
+<!-- MDF3-Wk4 -->
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="Hybrid App Project" />
+		<title>MDF3-WK4 (Hybrid App)</title>
+		
+		<script>
+		
+			
+			function add(){
+				var a = parseInt(document.myform.num_a.value);
+				var b = parseInt(document.myform.num_b.value);
+				var c = a + b;
+				document.myform.result.value = c;
+				Android.calcPlus(a,b);
+			}
+			
+			function sub(){
+				var a = parseInt(document.myform.num_a.value);
+				var b = parseInt(document.myform.num_b.value);
+				var c = a - b;
+				document.myform.result.value = c;
+				Android.calcSub(a,b);
+			}
+			
+			
+			
+			function multi(){
+				var a = parseInt(document.myform.num_a.value);
+				var b = parseInt(document.myform.num_b.value);
+				var c = a * b;
+				document.myform.result.value = c;
+				Android.calcMulti(a,b);
+			}
+			
+		</script>
+	</head>
+	<body align="left">
+		<header>
+			<hgroup>
+				<h1>Hybrid App</h1>
+				<h2>MDF3-Wk4</h2>
+			</hgroup>
+		</header></br>
+		
+		<form name="myform">
+			<br/>Number 1: <input type="text" name="num_a"/>
+			<br/>Number 2: <input type="text" name="num_b"/>
+
+			<br/><input type="button" onclick="add()" value="  +  "/>
+			<input type="button" onclick="sub()" value="  -  "/>
+			<input type="button" onclick="multi()" value="  x  "/>
+			<br/>Result: <input type="text" name="result"/>
+		</form>
+
+		<footer>
+
+		</footer>
+	</body>
+<html/>

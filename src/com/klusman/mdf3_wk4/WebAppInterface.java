@@ -5,16 +5,47 @@ import android.widget.Toast;
 
 
 public class WebAppInterface {
-    Context mContext;
+    Context _context;
 
     /** Instantiate the interface and set the context */
-    WebAppInterface(Context c) {
-        mContext = c;
+    WebAppInterface(Context context) {
+    	_context = context;
     }
 
-    /** Show a toast from the web page */
+    
     @JavascriptInterface
     public void showToast(String toast) {
-        Toast.makeText(mContext, toast, Toast.LENGTH_SHORT).show();
+        Toast.makeText(_context, toast, Toast.LENGTH_SHORT).show();
+    }
+    
+    
+    @JavascriptInterface
+    public void calcPlus(int a, int b)
+    {
+    	int A = a;
+    	int B = b;
+    	int C = A+B;
+    	String stringC = String.valueOf(C);
+    	showToast(stringC);
+    }
+    
+    @JavascriptInterface
+    public void calcSub(int a, int b)
+    {
+    	int A = a;
+    	int B = b;
+    	int C = A-B;
+    	String stringC = String.valueOf(C);
+    	showToast(stringC);
+    }
+    
+    @JavascriptInterface
+    public void calcMulti(int a, int b)
+    {
+    	int A = a;
+    	int B = b;
+    	int C = A*B;
+    	String stringC = String.valueOf(C);
+    	showToast(stringC);
     }
 }
