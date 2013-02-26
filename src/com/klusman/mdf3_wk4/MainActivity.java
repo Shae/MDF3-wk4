@@ -6,7 +6,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.util.Log;
 import android.view.Menu;
 import android.view.WindowManager;
 import android.webkit.JavascriptInterface;
@@ -48,7 +47,7 @@ public class MainActivity extends Activity {
 
     
 
-
+////////////////// WEB INTERFACE /////////////////////
 	class WebAppInterface{
 		
 		int answer;
@@ -111,6 +110,45 @@ public class MainActivity extends Activity {
 			startActivity(next);
 			
 		}
+		
+//		public void setInfo(){
+//			
+//			switch (webview.getId()) {
+//			case R.id.btn1:
+//				
+//				break;
+//			case R.id.btn2:
+//							
+//				break;
+//			case R.id.btn3:
+//				
+//				break;
+//			case R.id.btn4:
+//				
+//				break;
+//			case R.id.btn5:
+//				
+//				break;
+//			case R.id.btn6:
+//				
+//				break;
+//			case R.id.btn7:
+//				
+//				break;
+//			case R.id.btn8:
+//				
+//				break;
+//			case R.id.btn9:
+//				
+//				break;
+//			case R.id.btn0:
+//				
+//				break;
+//			default:
+//				break;
+//			}
+//			
+//		}// END setinfo
 	
-	}
-}
+	}  //  END Class
+}  // END MAINACTIVITY
