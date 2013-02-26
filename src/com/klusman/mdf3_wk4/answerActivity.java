@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.WindowManager;
 
 
-public class answerActivity extends Activity{
+public class AnswerActivity extends Activity{
 
 	   @Override
 	    protected void onCreate(Bundle savedInstanceState) {

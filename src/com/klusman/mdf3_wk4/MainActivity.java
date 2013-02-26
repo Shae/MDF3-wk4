@@ -303,15 +303,15 @@ public class MainActivity extends Activity {
 //			showToast(stringC);
 //		}
 		
-		
+		@JavascriptInterface
 		public void runAct() {
 			toastMe();
-			Intent next = new Intent(_context, answerActivity.class);
+			Intent next = new Intent(_context, AnswerActivity.class);
 			//next.putExtra("ANSWER", answer);  
 			startActivity(next);
 			
 		}
-		
+		@JavascriptInterface
 		public void toastMe(){
 			 Toast.makeText(_context, "BOOM BABY", Toast.LENGTH_SHORT).show();
 		}
