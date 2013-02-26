@@ -1,11 +1,16 @@
 package com.klusman.mdf3_wk4;
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 import android.webkit.JavascriptInterface;
 import android.widget.Toast;
 
 
-public class WebAppInterface {
+public class WebAppInterface extends Activity{
+	
     Context _context;
+    int answer;
 
     /** Instantiate the interface and set the context */
     WebAppInterface(Context context) {
@@ -16,6 +21,7 @@ public class WebAppInterface {
     @JavascriptInterface
     public void showToast(String toast) {
         Toast.makeText(_context, toast, Toast.LENGTH_SHORT).show();
+       // answerActivityFunction();
     }
     
     
@@ -27,6 +33,7 @@ public class WebAppInterface {
     	int C = A+B;
     	String stringC = String.valueOf(C);
     	showToast(stringC);
+    	
     }
     
     @JavascriptInterface
@@ -58,4 +65,20 @@ public class WebAppInterface {
     	String stringC = String.valueOf(C);
     	showToast(stringC);
     }
+    
+    public void setit(){
+    	
+    }
+    
+	public void answerActivityFunction() {
+		
+			
+		Log.i("TEST","TEST");
+		Intent next = new Intent(_context, answerActivity.class);
+		//next.putExtra("ANSWER", answer);  // Pass Current Zip Location
+		this.startActivity(next);
+		
+	}
+    
+    
 }
