@@ -36,7 +36,6 @@
             android:id="@+id/gridLayout1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="false"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="3dp"
@@ -56,7 +55,7 @@
                 android:layout_row="0"
                 android:text="1"
                 android:textColor="#00FF00"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/btn2"
@@ -68,7 +67,7 @@
                 android:layout_row="0"
                 android:text="2"
                 android:textColor="#00FF00"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/btn3"
@@ -81,7 +80,7 @@
                 android:layout_row="0"
                 android:text="3"
                 android:textColor="#00FF00"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/btn4"
@@ -93,7 +92,7 @@
                 android:layout_row="1"
                 android:text="4"
                 android:textColor="#00FF00"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/btn5"
@@ -104,7 +103,7 @@
                 android:layout_row="1"
                 android:text="5"
                 android:textColor="#00FF00"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/btn6"
@@ -116,7 +115,7 @@
                 android:layout_row="1"
                 android:text="6"
                 android:textColor="#00FF00"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/btn7"
@@ -128,7 +127,7 @@
                 android:layout_row="2"
                 android:text="7"
                 android:textColor="#00FF00"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/btn8"
@@ -139,7 +138,7 @@
                 android:layout_row="2"
                 android:text="8"
                 android:textColor="#00FF00"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/btn9"
@@ -151,7 +150,7 @@
                 android:layout_row="2"
                 android:text="9"
                 android:textColor="#00FF00"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/btn0"
@@ -163,7 +162,7 @@
                 android:layout_row="3"
                 android:text="0"
                 android:textColor="#00FF00"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
             
             <Button
                 android:id="@+id/btnClear"
@@ -175,7 +174,7 @@
                 android:layout_row="3"
                 android:text="C"
                 android:textColor="#ffffff"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
         </GridLayout>
 
@@ -184,7 +183,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/webview"
-            android:layout_centerHorizontal="false"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="10dp"
@@ -205,7 +203,7 @@
                 android:layout_row="0"
                 android:text="+"
                 android:textColor="#00FF00"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/Sub"
@@ -218,7 +216,7 @@
                 android:layout_row="1"
                 android:text="-"
                 android:textColor="#00FF00"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/Multi"
@@ -231,7 +229,7 @@
                 android:layout_row="2"
                 android:text="*"
                 android:textColor="#00FF00"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
             <Button
                 android:id="@+id/Divide"
@@ -245,7 +243,7 @@
                 android:layout_row="3"
                 android:text="/"
                 android:textColor="#00FF00"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
             
         </GridLayout>
         
@@ -285,7 +283,7 @@
         android:layout_marginTop="3dp"
         android:text="="
         android:textColor="#00FF00"
-        android:textSize="25dp" />
+        android:textSize="25sp" />
         
     </GridLayout>
 </LinearLayout>
