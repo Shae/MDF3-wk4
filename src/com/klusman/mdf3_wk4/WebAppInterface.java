@@ -48,4 +48,14 @@ public class WebAppInterface {
     	String stringC = String.valueOf(C);
     	showToast(stringC);
     }
+    
+    @JavascriptInterface
+    public void calcDivide(int a, int b)
+    {
+    	int A = a;
+    	int B = b;
+    	double C = A/B;
+    	String stringC = String.valueOf(C);
+    	showToast(stringC);
+    }
 }

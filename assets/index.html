@@ -11,7 +11,6 @@
 		
 		<script>
 		
-			
 			function add(){
 				var a = parseInt(document.myform.num_a.value);
 				var b = parseInt(document.myform.num_b.value);
@@ -28,8 +27,6 @@
 				Android.calcSub(a,b);
 			}
 			
-			
-			
 			function multi(){
 				var a = parseInt(document.myform.num_a.value);
 				var b = parseInt(document.myform.num_b.value);
@@ -38,24 +35,55 @@
 				Android.calcMulti(a,b);
 			}
 			
+			function divide(){
+				var a = parseInt(document.myform.num_a.value);
+				var b = parseInt(document.myform.num_b.value);
+				var c = a / b;
+				document.myform.result.value = c;
+				Android.calcDivide(a,b);
+			}
+			
 		</script>
+		 <style type="text/css">
+		  body {
+			    color: #00FF00;
+			    background-color: black }
+		  .btn {
+			    float:center;
+			    height:4em;
+			    width:4em;
+			    text-align:center;
+			    white-space:nowrap;
+			}
+			.bar {
+			    
+			    height:2em;
+			    
+			   
+			}
+		  </style>
 	</head>
 	<body align="left">
 		<header>
-			<hgroup>
+			<hgroup style="text-align:center;">
 				<h1>Hybrid App</h1>
-				<h2>MDF3-Wk4</h2>
+				<h2>Simple Calculator</h2>
 			</hgroup>
 		</header></br>
 		
-		<form name="myform">
-			<br/>Number 1: <input type="text" name="num_a"/>
-			<br/>Number 2: <input type="text" name="num_b"/>
-
-			<br/><input type="button" onclick="add()" value="  +  "/>
-			<input type="button" onclick="sub()" value="  -  "/>
-			<input type="button" onclick="multi()" value="  x  "/>
-			<br/>Result: <input type="text" name="result"/>
+		<form name="myform" style="text-align:center;">
+			<br/>Number 1: <input type="number" class="bar" name="num_a"/>
+			<br/>
+			<br/>Number 2: <input type="number" class="bar"name="num_b"/>
+			<br/>
+			<br/>
+			<br/><input type="button" onclick="add()" class="btn" value="  +  "/>
+			<input type="button" onclick="sub()" class="btn" value="  -  "/>
+			<input type="button" onclick="multi()" class="btn" value="  x  "/>
+			<input type="button" onclick="divide()" class="btn" value="  /  "/>
+			<br/>
+			<br/>
+			<br/>Result: <input type="text" class="bar"name="result"/>
 		</form>
 
 		<footer>
