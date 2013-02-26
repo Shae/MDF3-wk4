@@ -42,6 +42,7 @@ public class MainActivity extends Activity {
         webview.loadUrl("file:///android_asset/index.html");
         webview.addJavascriptInterface(new WebAppInterface(), "Android");
         
+        
         Button num0 = (Button)findViewById(R.id.btn0);
         Button num1 = (Button)findViewById(R.id.btn1);
         Button num2 = (Button)findViewById(R.id.btn2);
@@ -52,6 +53,7 @@ public class MainActivity extends Activity {
         Button num7 = (Button)findViewById(R.id.btn7);
         Button num8 = (Button)findViewById(R.id.btn8);
         Button num9 = (Button)findViewById(R.id.btn9);
+        Button btnClear = (Button)findViewById(R.id.btnClear);
         
         num0.setOnClickListener(new OnClickListener() {
 			
@@ -59,24 +61,23 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				
+				webview.loadUrl("javascript:setReadout0()");
 			}
 		});
         
         num1.setOnClickListener(new OnClickListener() {
 				
-				@Override
-				public void onClick(View v) {
-					// TODO Auto-generated method stub
-					
-				}
-			});
+			@Override
+			public void onClick(View v) {
+				webview.loadUrl("javascript:setReadout1()");
+			}
+		});
 	  
         num2.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				
+				webview.loadUrl("javascript:setReadout2()");
 			}
 		});
 	  
@@ -84,8 +85,7 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				
+				webview.loadUrl("javascript:setReadout3()");
 			}
 		});
 	  
@@ -93,8 +93,7 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				
+				webview.loadUrl("javascript:setReadout4()");
 			}
 		});
 	  
@@ -102,8 +101,7 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				
+				webview.loadUrl("javascript:setReadout5()");
 			}
 		});
 	  
@@ -111,8 +109,7 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				
+				webview.loadUrl("javascript:setReadout6()");
 			}
 		});
 	  
@@ -120,8 +117,7 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				
+				webview.loadUrl("javascript:setReadout7()");
 			}
 		});
 	  
@@ -129,8 +125,7 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				
+				webview.loadUrl("javascript:setReadout8()");
 			}
 		});
 	  
@@ -138,8 +133,15 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				
+				webview.loadUrl("javascript:setReadout9()");
+			}
+		});
+        
+        btnClear.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				webview.loadUrl("javascript:setReadoutClear()");
 			}
 		});
 
@@ -266,6 +268,9 @@ public class MainActivity extends Activity {
 			
 		}
 		
+
+		
+
 	
 	}  //  END Class
 }  // END MAINACTIVITY
