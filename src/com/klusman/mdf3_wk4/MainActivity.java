@@ -255,65 +255,65 @@ public class MainActivity extends Activity {
 ////////////////// WEB INTERFACE /////////////////////
 	class WebAppInterface{
 		
-		int answer;
 	
 		@JavascriptInterface
 		public void showToast(String toast) {
 		    Toast.makeText(_context, toast, Toast.LENGTH_SHORT).show();
-		    answerActivityFunction();
 		}
 		
+//		
+//		@JavascriptInterface
+//		public void calcPlus(int a, int b)
+//		{
+//			int A = a;
+//			int B = b;
+//			int C = A+B;
+//			String stringC = String.valueOf(C);
+//			showToast(stringC);
+//			
+//		}
+//		
+//		@JavascriptInterface
+//		public void calcSub(int a, int b)
+//		{
+//			int A = a;
+//			int B = b;
+//			int C = A-B;
+//			String stringC = String.valueOf(C);
+//			showToast(stringC);
+//		}
+//		
+//		@JavascriptInterface
+//		public void calcMulti(int a, int b)
+//		{
+//			int A = a;
+//			int B = b;
+//			int C = A*B;
+//			String stringC = String.valueOf(C);
+//			showToast(stringC);
+//		}
+//		
+//		@JavascriptInterface
+//		public void calcDivide(int a, int b)
+//		{
+//			int A = a;
+//			int B = b;
+//			double C = A/B;
+//			String stringC = String.valueOf(C);
+//			showToast(stringC);
+//		}
 		
-		@JavascriptInterface
-		public void calcPlus(int a, int b)
-		{
-			int A = a;
-			int B = b;
-			int C = A+B;
-			String stringC = String.valueOf(C);
-			showToast(stringC);
-			
-		}
 		
-		@JavascriptInterface
-		public void calcSub(int a, int b)
-		{
-			int A = a;
-			int B = b;
-			int C = A-B;
-			String stringC = String.valueOf(C);
-			showToast(stringC);
-		}
-		
-		@JavascriptInterface
-		public void calcMulti(int a, int b)
-		{
-			int A = a;
-			int B = b;
-			int C = A*B;
-			String stringC = String.valueOf(C);
-			showToast(stringC);
-		}
-		
-		@JavascriptInterface
-		public void calcDivide(int a, int b)
-		{
-			int A = a;
-			int B = b;
-			double C = A/B;
-			String stringC = String.valueOf(C);
-			showToast(stringC);
-		}
-		
-		public void setit(){
-			
-		}
-		
-		public void answerActivityFunction() {
+		public void runAct() {
+			toastMe();
 			Intent next = new Intent(_context, answerActivity.class);
-			//next.putExtra("ANSWER", answer);  // Pass Current Zip Location
+			//next.putExtra("ANSWER", answer);  
 			startActivity(next);
 			
+		}
+		
+		public void toastMe(){
+			 Toast.makeText(_context, "BOOM BABY", Toast.LENGTH_SHORT).show();
 		}
 		
 

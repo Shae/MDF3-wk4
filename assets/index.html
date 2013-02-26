@@ -9,13 +9,24 @@
 		<meta name="description" content="Hybrid App Project" />
 		<title>MDF3-WK4 (Hybrid App)</title>
 		
+<!-- ///////////////////////////////////////////////  -->			
 		<script>
 		
 		var _a;
 		var _eType;
 		var _b;
 		
-			function add(){
+		
+			function runAct(){
+				document.myform.result.value = "HELLO";
+				Android.runAct();
+			}
+			
+			function runToast(){
+				Android.toastMe();
+			}
+		
+			/* function add(){
 				var a = parseInt(document.myform.num_a.value);
 				var b = parseInt(document.myform.num_b.value);
 				var c = a + b;
@@ -45,7 +56,7 @@
 				var c = a / b;
 				document.myform.result.value = c;
 				Android.calcDivide(a,b);
-			}
+			} */
 			
 			function setReadout0(){
 				var a = document.myform.num_a.value;
@@ -151,10 +162,6 @@
 				document.myform.num_a.value = "";		
 			}
 			
-			function setReadoutAdd(){
-				_a = document.myform.num_a.value;
-				document.myform.num_a.value = "";		
-			}
 			
 			function setAdd(){
 				_a = document.myform.num_a.value;
@@ -201,37 +208,44 @@
 					document.myform.num_a.value = c;
 				}
 				
-		
+				//Android.runAct();
+				runToast();
 			}
 			
 		</script>
-		 <style type="text/css">
-		  body {
+		
+<!-- ///////////////////////////////////////////////  -->	
+		<style type="text/css">
+		  	body {
 			    color: #00FF00;
 			    background-color: black }
 			    
-		  .btn {
+		  	.btn {
 			    float:center;
 			    height:4em;
 			    width:4em;
 			    text-align:center;
-			    white-space:nowrap;
-			}
+			    white-space:nowrap;}
 			
 			.bar {			    
-			    height:2em;
-			}
+			    height:25px;
+			    text-align:center;
+			    font-weight:bold;}
+			
+			.btn2{
+				height:35px;}
 			
 			.out {
 			    float:center;
 			    height:3em;
 
 			    text-align:center;
-			    white-space:nowrap;
-			}
-		  </style>
+			    white-space:nowrap;}
+		</style>
+<!-- ///////////////////////////////////////////////  -->	
+		
 	</head>
-	<body align="left">
+	<body >
 		<header>
 			<hgroup style="text-align:center;">
 				<!-- <h1>Hybrid App</h1> -->
@@ -240,26 +254,8 @@
 		</header>
 		
 		<form name="myform" style="text-align:center;">
-			<input type="number" class="bar" name="num_a"/>
-		<!-- 	<br/>
-			<br/>Number 2: <input type="number" class="bar"name="num_b"/>
-			<br/>
-			<br/>
-			<br/>
-			<input type="button" onclick="add()" class="btn" value="  +  "/>
-			<input type="button" onclick="sub()" class="btn" value="  -  "/>
-			<input type="button" onclick="multi()" class="btn" value="  x  "/>
-			<input type="button" onclick="divide()" class="btn" value="  /  "/>
-			<br/>
-			<br/>
-			<br/>Result: <input type="text" class="bar"name="result"/>
-			<br/>
-			<br/> -->
-			<!-- <input type="button" onclick="mathDotCom()" class="out" value="  - Go To Math.com - "/> -->
+			<input type="number" class="bar" name="num_a" readonly />
 		</form>
 
-		<footer>
-
-		</footer>
 	</body>
 <html/>
