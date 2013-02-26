@@ -11,6 +11,10 @@
 		
 		<script>
 		
+		var _a;
+		var _eType;
+		var _b;
+		
 			function add(){
 				var a = parseInt(document.myform.num_a.value);
 				var b = parseInt(document.myform.num_b.value);
@@ -145,6 +149,59 @@
 			
 			function setReadoutClear(){
 				document.myform.num_a.value = "";		
+			}
+			
+			function setReadoutAdd(){
+				_a = document.myform.num_a.value;
+				document.myform.num_a.value = "";		
+			}
+			
+			function setAdd(){
+				_a = document.myform.num_a.value;
+				_eType = "ADD";
+				document.myform.num_a.value = "";		
+			}
+			
+			function setSub(){
+				_a = document.myform.num_a.value;
+				_eType = "SUB";
+				document.myform.num_a.value = "";		
+			}
+			
+			function setMulti(){
+				_a = document.myform.num_a.value;
+				_eType = "MULTI";
+				document.myform.num_a.value = "";		
+			}
+			
+			function setDivide(){
+				_a = document.myform.num_a.value;
+				_eType = "DIVIDE";
+				document.myform.num_a.value = "";		
+			}
+			
+			function runEQUALS(){
+				_b = document.myform.num_a.value;
+				A = parseInt(_a);
+				B = parseInt(_b);
+				if(_eType == "ADD"){
+					var c = A + B;
+					document.myform.num_a.value = c;
+				}
+				if(_eType == "SUB"){
+					var c = A - B;
+					document.myform.num_a.value = c;
+				}
+				if(_eType == "MULTI"){
+					var c = A * B;
+					document.myform.num_a.value = c;
+				}
+				if(_eType == "DIVIDE"){
+					var c = A / B;
+					document.myform.num_a.value = c;
+				}
+				
+		
 			}
 			
 		</script>

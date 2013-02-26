@@ -54,6 +54,14 @@ public class MainActivity extends Activity {
         Button num8 = (Button)findViewById(R.id.btn8);
         Button num9 = (Button)findViewById(R.id.btn9);
         Button btnClear = (Button)findViewById(R.id.btnClear);
+        Button btnEquals = (Button)findViewById(R.id.buttonEquals);
+        Button btnADD = (Button)findViewById(R.id.Add);
+        Button btnSUB = (Button)findViewById(R.id.Sub);
+        Button btnMULTI = (Button)findViewById(R.id.Multi);
+        Button btnDIVIDE = (Button)findViewById(R.id.Divide);
+        
+        
+        
         
         num0.setOnClickListener(new OnClickListener() {
 			
@@ -142,6 +150,46 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				webview.loadUrl("javascript:setReadoutClear()");
+			}
+		});
+        
+        btnADD.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				webview.loadUrl("javascript:setAdd()");
+			}
+		});
+        
+        btnSUB.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				webview.loadUrl("javascript:setSub()");
+			}
+		});
+
+        btnMULTI.setOnClickListener(new OnClickListener() {
+	
+        	@Override
+        	public void onClick(View v) {
+        		webview.loadUrl("javascript:setMulti()");
+        	}
+        });
+
+		btnDIVIDE.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				webview.loadUrl("javascript:setDivide()");
+			}
+		});
+        
+        btnEquals.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				webview.loadUrl("javascript:runEQUALS()");
 			}
 		});
 
