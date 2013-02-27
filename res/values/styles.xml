@@ -17,4 +17,25 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
+    
+     <style name="dropShadowBlack">
+	    <item name="android:shadowColor">#000000</item>
+	    <item name="android:shadowDx">4</item>
+	    <item name="android:shadowDy">4</item>
+	    <item name="android:shadowRadius">3</item>
+ 	</style>
+  
+    <style name="dropShadowGrey">
+	    <item name="android:shadowColor">#808080</item>
+	    <item name="android:shadowDx">4</item>
+	    <item name="android:shadowDy">4</item>
+	    <item name="android:shadowRadius">3</item>
+  	</style>
+  
+    <style name="dropShadowWhite">
+	    <item name="android:shadowColor">#ffffff</item>
+	    <item name="android:shadowDx">4</item>
+	    <item name="android:shadowDy">4</item>
+	    <item name="android:shadowRadius">3</item>
+  	</style>
 </resources>

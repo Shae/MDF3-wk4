@@ -9,10 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -31,7 +28,6 @@ public class AnswerActivity extends Activity{
 	        Bundle extras = getIntent().getExtras();
 			if (extras != null) {
 			    A = extras.getString("EXTRA");	
-			 
 			}
 			
 			TextView NumAnswer = (TextView)findViewById(R.id.ansMainTxt);
@@ -45,8 +41,6 @@ public class AnswerActivity extends Activity{
 					subAnswer.setText("Your answer is an ODD number!");
 				}
 			}
-			
-			
 	    }
 
 
@@ -61,11 +55,9 @@ public class AnswerActivity extends Activity{
 		@Override
 		public boolean onMenuItemSelected(int featureId, MenuItem item) {
 			switch (item.getItemId()){
-
 				case R.id.menu_back:
 						super.onBackPressed();
-					break;
-					
+					break;					
 				case R.id.menu_math:
 						String url = "http://www.math.com";
 						Intent i = new Intent(Intent.ACTION_VIEW);

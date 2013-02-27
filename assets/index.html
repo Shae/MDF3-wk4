@@ -11,12 +11,10 @@
 		
 <!-- ///////////////////////////////////////////////  -->			
 		<script>
-		
-		var _a;
-		var _eType;
-		var _b;
-		
-		
+			var _a;
+			var _eType;
+			var _b;
+			
 			function runAct(){
 				Android.runAct();
 			}
@@ -27,8 +25,7 @@
 		
 			function setReadout0(){
 				var a = document.myform.num_a.value;
-				if(a != null){
-					
+				if(a != null){				
 					document.myform.num_a.value = a + "0";
 				}else{
 					document.myform.num_a.value = "0";
@@ -37,8 +34,7 @@
 			
 			function setReadout1(){
 				var a = document.myform.num_a.value;
-				if(a != null){
-					
+				if(a != null){				
 					document.myform.num_a.value = a + "1";
 				}else{
 					document.myform.num_a.value = "1";
@@ -47,8 +43,7 @@
 			
 			function setReadout2(){
 				var a = document.myform.num_a.value;
-				if(a != null){
-					
+				if(a != null){				
 					document.myform.num_a.value = a + "2";
 				}else{
 					document.myform.num_a.value = "2";
@@ -57,8 +52,7 @@
 			
 			function setReadout3(){
 				var a = document.myform.num_a.value;
-				if(a != null){
-					
+				if(a != null){				
 					document.myform.num_a.value = a + "3";
 				}else{
 					document.myform.num_a.value = "3";
@@ -67,8 +61,7 @@
 			
 			function setReadout4(){
 				var a = document.myform.num_a.value;
-				if(a != null){
-					
+				if(a != null){				
 					document.myform.num_a.value = a + "4";
 				}else{
 					document.myform.num_a.value = "4";
@@ -77,8 +70,7 @@
 			
 			function setReadout5(){
 				var a = document.myform.num_a.value;
-				if(a != null){
-					
+				if(a != null){			
 					document.myform.num_a.value = a + "5";
 				}else{
 					document.myform.num_a.value = "5";
@@ -87,8 +79,7 @@
 			
 			function setReadout6(){
 				var a = document.myform.num_a.value;
-				if(a != null){
-					
+				if(a != null){				
 					document.myform.num_a.value = a + "6";
 				}else{
 					document.myform.num_a.value = "6";
@@ -97,8 +88,7 @@
 			
 			function setReadout7(){
 				var a = document.myform.num_a.value;
-				if(a != null){
-					
+				if(a != null){			
 					document.myform.num_a.value = a + "7";
 				}else{
 					document.myform.num_a.value = "7";
@@ -107,8 +97,7 @@
 			
 			function setReadout8(){
 				var a = document.myform.num_a.value;
-				if(a != null){
-					
+				if(a != null){			
 					document.myform.num_a.value = a + "8";
 				}else{
 					document.myform.num_a.value = "8";
@@ -117,8 +106,7 @@
 			
 			function setReadout9(){
 				var a = document.myform.num_a.value;
-				if(a != null){
-					
+				if(a != null){	
 					document.myform.num_a.value = a + "9";
 				}else{
 					document.myform.num_a.value = "9";
@@ -155,34 +143,42 @@
 			}
 			
 			function runEQUALS(){
-				_b = document.myform.num_a.value;
-				A = parseInt(_a);
-				B = parseInt(_b);
-				var c;
-				if(_eType == "ADD"){
-					c = A + B;
-					document.myform.num_a.value = c;
-				}
-				if(_eType == "SUB"){
-					c = A - B;
-					document.myform.num_a.value = c;
-				}
-				if(_eType == "MULTI"){
-					c = A * B;
-					document.myform.num_a.value = c;
-				}
-				if(_eType == "DIVIDE"){
-					c = A / B;
-					document.myform.num_a.value = c;
+				if(_eType != null){
+					_b = document.myform.num_a.value;
+					A = parseInt(_a);
+					B = parseInt(_b);
+					var c;
+					if(_eType == "ADD"){
+						c = A + B;
+						document.myform.num_a.value = c;
+					}
+					if(_eType == "SUB"){
+						c = A - B;
+						document.myform.num_a.value = c;
+					}
+					if(_eType == "MULTI"){
+						c = A * B;
+						document.myform.num_a.value = c;
+					}
+					if(_eType == "DIVIDE"){
+						c = A / B;
+						document.myform.num_a.value = c;
+					}
+						Android.runAct(c);	
 				}
 				
-				Android.runAct(c);
-				//runToast();
+				function reset(){
+					_a = "";
+					_b = "";
+					_eType = "";
+					document.myform.num_a.value = "";		
+				}
+				
 			}
-			
 		</script>
 		
-<!-- ///////////////////////////////////////////////  -->	
+<!-- ///////////////////////////////////////////////  -->
+	
 		<style type="text/css">
 		  	body {
 			    color: #00FF00;
@@ -210,6 +206,7 @@
 			    text-align:center;
 			    white-space:nowrap;}
 		</style>
+		
 <!-- ///////////////////////////////////////////////  -->	
 		
 	</head>
@@ -222,7 +219,8 @@
 		</header>
 		
 		<form name="myform" style="text-align:center;">
-			<input type="number" class="bar" name="num_a" readonly />
+			<input type="number" class="bar" name="num_a" />
+			<!-- Left readable for optional keyboard input -->
 		</form>
 
 	</body>

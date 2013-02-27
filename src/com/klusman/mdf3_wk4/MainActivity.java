@@ -1,14 +1,16 @@
 package com.klusman.mdf3_wk4;
 
 
+import android.net.Uri;
 import android.os.Bundle;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
@@ -25,13 +27,16 @@ public class MainActivity extends Activity {
 	WebView webview;
 	int numA;
 	int numB;
-	
-	
-    @Override
+		
+
+	@SuppressLint("SetJavaScriptEnabled") @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
         _context = this;
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
+        		WindowManager.LayoutParams.FLAG_FULLSCREEN);
       	setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_main);
         
@@ -60,133 +65,113 @@ public class MainActivity extends Activity {
         Button btnMULTI = (Button)findViewById(R.id.Multi);
         Button btnDIVIDE = (Button)findViewById(R.id.Divide);
         
-        
-        
-        
-        num0.setOnClickListener(new OnClickListener() {
-			
+          
+        num0.setOnClickListener(new OnClickListener() {			
 			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				
+			public void onClick(View v) {		
 				webview.loadUrl("javascript:setReadout0()");
 			}
 		});
         
-        num1.setOnClickListener(new OnClickListener() {
-				
+        num1.setOnClickListener(new OnClickListener() {				
 			@Override
 			public void onClick(View v) {
 				webview.loadUrl("javascript:setReadout1()");
 			}
 		});
 	  
-        num2.setOnClickListener(new OnClickListener() {
-			
+        num2.setOnClickListener(new OnClickListener() {			
 			@Override
 			public void onClick(View v) {
 				webview.loadUrl("javascript:setReadout2()");
 			}
 		});
 	  
-        num3.setOnClickListener(new OnClickListener() {
-			
+        num3.setOnClickListener(new OnClickListener() {		
 			@Override
 			public void onClick(View v) {
 				webview.loadUrl("javascript:setReadout3()");
 			}
 		});
 	  
-        num4.setOnClickListener(new OnClickListener() {
-			
+        num4.setOnClickListener(new OnClickListener() {		
 			@Override
 			public void onClick(View v) {
 				webview.loadUrl("javascript:setReadout4()");
 			}
 		});
 	  
-        num5.setOnClickListener(new OnClickListener() {
-			
+        num5.setOnClickListener(new OnClickListener() {		
 			@Override
 			public void onClick(View v) {
 				webview.loadUrl("javascript:setReadout5()");
 			}
 		});
 	  
-        num6.setOnClickListener(new OnClickListener() {
-			
+        num6.setOnClickListener(new OnClickListener() {			
 			@Override
 			public void onClick(View v) {
 				webview.loadUrl("javascript:setReadout6()");
 			}
 		});
 	  
-        num7.setOnClickListener(new OnClickListener() {
-			
+        num7.setOnClickListener(new OnClickListener() {			
 			@Override
 			public void onClick(View v) {
 				webview.loadUrl("javascript:setReadout7()");
 			}
 		});
 	  
-        num8.setOnClickListener(new OnClickListener() {
-			
+        num8.setOnClickListener(new OnClickListener() {		
 			@Override
 			public void onClick(View v) {
 				webview.loadUrl("javascript:setReadout8()");
 			}
 		});
 	  
-        num9.setOnClickListener(new OnClickListener() {
-			
+        num9.setOnClickListener(new OnClickListener() {			
 			@Override
 			public void onClick(View v) {
 				webview.loadUrl("javascript:setReadout9()");
 			}
 		});
         
-        btnClear.setOnClickListener(new OnClickListener() {
-			
+        btnClear.setOnClickListener(new OnClickListener() {			
 			@Override
 			public void onClick(View v) {
 				webview.loadUrl("javascript:setReadoutClear()");
 			}
 		});
         
-        btnADD.setOnClickListener(new OnClickListener() {
-			
+        btnADD.setOnClickListener(new OnClickListener() {			
 			@Override
 			public void onClick(View v) {
 				webview.loadUrl("javascript:setAdd()");
 			}
 		});
         
-        btnSUB.setOnClickListener(new OnClickListener() {
-			
+        btnSUB.setOnClickListener(new OnClickListener() {		
 			@Override
 			public void onClick(View v) {
 				webview.loadUrl("javascript:setSub()");
 			}
 		});
 
-        btnMULTI.setOnClickListener(new OnClickListener() {
-	
+        btnMULTI.setOnClickListener(new OnClickListener() {	
         	@Override
         	public void onClick(View v) {
         		webview.loadUrl("javascript:setMulti()");
         	}
         });
 
-		btnDIVIDE.setOnClickListener(new OnClickListener() {
-			
+		btnDIVIDE.setOnClickListener(new OnClickListener() {		
 			@Override
 			public void onClick(View v) {
 				webview.loadUrl("javascript:setDivide()");
 			}
 		});
         
-        btnEquals.setOnClickListener(new OnClickListener() {
-			
+        btnEquals.setOnClickListener(new OnClickListener() {			
 			@Override
 			public void onClick(View v) {
 				webview.loadUrl("javascript:runEQUALS()");
@@ -196,51 +181,23 @@ public class MainActivity extends Activity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        
+    public boolean onCreateOptionsMenu(Menu menu) {     
         getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
     }
     
-//    public void clickIt(){
-//    	Log.i("TEST", "ClickIt");
-//    	
-//    	switch (webview.getId()) {
-//    	case R.id.btn1:
-//    		myToast("Button 1");
-//    		break;
-//    	case R.id.btn2:
-//    		
-//    		break;
-//    	case R.id.btn3:
-//    		
-//    		break;
-//    	case R.id.btn4:
-//    		
-//    		break;
-//    	case R.id.btn5:
-//    		
-//    		break;
-//    	case R.id.btn6:
-//    		
-//    		break;
-//    	case R.id.btn7:
-//    		
-//    		break;
-//    	case R.id.btn8:
-//    		
-//    		break;
-//    	case R.id.btn9:
-//    		
-//    		break;
-//    	case R.id.btn0:
-//    		
-//    		break;
-//    	default:
-//    		break;
-//    	}
-//    	
-//    }// END setinfo
+	@Override
+	public boolean onMenuItemSelected(int featureId, MenuItem item) {
+		switch (item.getItemId()){				
+			case R.id.menu_math:
+					String url = "http://www.math.com";
+					Intent i = new Intent(Intent.ACTION_VIEW);
+					i.setData(Uri.parse(url));
+					startActivity(i);
+				break;
+		}
+		return super.onMenuItemSelected(featureId, item);
+	}  //  END onMenuItemSelected
     
     public void myToast(String text){  // Toast Template
 		CharSequence textIN = text;
@@ -254,7 +211,6 @@ public class MainActivity extends Activity {
 
 ////////////////// WEB INTERFACE /////////////////////
 	class WebAppInterface{
-		
 	
 		@JavascriptInterface
 		public void showToast(String toast) {
@@ -263,20 +219,11 @@ public class MainActivity extends Activity {
 		
 		@JavascriptInterface
 		public void runAct(String A) {
-			// Need to pass the Calc answer stil
 			Intent next = new Intent(_context, AnswerActivity.class);
 			next.putExtra("EXTRA", A);  
 			startActivity(next);
 		}
 		
-		@JavascriptInterface
-		public void toastMe(){
-			 Toast.makeText(_context, "BOOM BABY", Toast.LENGTH_SHORT).show();
-		}
 		
-
-		
-
-	
 	}  //  END Class
 }  // END MAINACTIVITY

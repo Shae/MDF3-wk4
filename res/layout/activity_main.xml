@@ -43,6 +43,8 @@
                 android:layout_marginTop="3dp"
                 android:layout_row="0"
                 android:text="1"
+                tools:ignore="HardcodedText" 
+                style="@style/dropShadowBlack"
                 android:textColor="#00FF00"
                 android:textSize="30sp" />
 
@@ -55,6 +57,8 @@
                 android:layout_marginTop="3dp"
                 android:layout_row="0"
                 android:text="2"
+                tools:ignore="HardcodedText" 
+                style="@style/dropShadowBlack"
                 android:textColor="#00FF00"
                 android:textSize="30sp" />
 
@@ -68,6 +72,8 @@
                 android:layout_marginTop="3dp"
                 android:layout_row="0"
                 android:text="3"
+                tools:ignore="HardcodedText" 
+                style="@style/dropShadowBlack"
                 android:textColor="#00FF00"
                 android:textSize="30sp" />
 
@@ -80,6 +86,8 @@
                 android:layout_marginLeft="3dp"
                 android:layout_row="1"
                 android:text="4"
+                tools:ignore="HardcodedText" 
+                style="@style/dropShadowBlack"
                 android:textColor="#00FF00"
                 android:textSize="30sp" />
 
@@ -91,6 +99,8 @@
                 android:layout_gravity="left|top"
                 android:layout_row="1"
                 android:text="5"
+                tools:ignore="HardcodedText" 
+                style="@style/dropShadowBlack"
                 android:textColor="#00FF00"
                 android:textSize="30sp" />
 
@@ -103,6 +113,8 @@
                 android:layout_marginRight="3dp"
                 android:layout_row="1"
                 android:text="6"
+                tools:ignore="HardcodedText" 
+                style="@style/dropShadowBlack"
                 android:textColor="#00FF00"
                 android:textSize="30sp" />
 
@@ -115,6 +127,8 @@
                 android:layout_marginLeft="3dp"
                 android:layout_row="2"
                 android:text="7"
+                tools:ignore="HardcodedText" 
+                style="@style/dropShadowBlack"
                 android:textColor="#00FF00"
                 android:textSize="30sp" />
 
@@ -126,6 +140,8 @@
                 android:layout_gravity="left|top"
                 android:layout_row="2"
                 android:text="8"
+                tools:ignore="HardcodedText" 
+                style="@style/dropShadowBlack"
                 android:textColor="#00FF00"
                 android:textSize="30sp" />
 
@@ -138,6 +154,8 @@
                 android:layout_marginRight="3dp"
                 android:layout_row="2"
                 android:text="9"
+                tools:ignore="HardcodedText" 
+                style="@style/dropShadowBlack"
                 android:textColor="#00FF00"
                 android:textSize="30sp" />
 
@@ -150,6 +168,8 @@
                 android:layout_marginBottom="3dp"
                 android:layout_row="3"
                 android:text="0"
+                tools:ignore="HardcodedText" 
+                style="@style/dropShadowBlack"
                 android:textColor="#00FF00"
                 android:textSize="30sp" />
             
@@ -162,6 +182,8 @@
                 android:layout_marginLeft="3dp"
                 android:layout_row="3"
                 android:text="C"
+                tools:ignore="HardcodedText" 
+                style="@style/dropShadowBlack"
                 android:textColor="#ffffff"
                 android:textSize="30sp" />
 
@@ -171,7 +193,6 @@
             android:id="@+id/gridLayout2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/webview"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="10dp"
@@ -191,6 +212,8 @@
                 android:layout_marginTop="3dp"
                 android:layout_row="0"
                 android:text="+"
+                tools:ignore="HardcodedText" 
+                style="@style/dropShadowBlack"
                 android:textColor="#00FF00"
                 android:textSize="30sp" />
 
@@ -204,6 +227,8 @@
                 android:layout_marginRight="3dp"
                 android:layout_row="1"
                 android:text="-"
+                tools:ignore="HardcodedText" 
+                style="@style/dropShadowBlack"
                 android:textColor="#00FF00"
                 android:textSize="30sp" />
 
@@ -217,6 +242,8 @@
                 android:layout_marginRight="3dp"
                 android:layout_row="2"
                 android:text="*"
+                tools:ignore="HardcodedText" 
+                style="@style/dropShadowBlack"
                 android:textColor="#00FF00"
                 android:textSize="30sp" />
 
@@ -231,6 +258,8 @@
                 android:layout_marginRight="3dp"
                 android:layout_row="3"
                 android:text="/"
+                tools:ignore="HardcodedText" 
+                style="@style/dropShadowBlack"
                 android:textColor="#00FF00"
                 android:textSize="30sp" />
             
@@ -247,11 +276,9 @@
     android:orientation="vertical" >
 
     <GridLayout
-        android:id="@+id/gridLayout2"
+        android:id="@+id/gridLayout3"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/webview"
-        android:layout_centerHorizontal="false"
         android:layout_marginBottom="3dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -262,17 +289,17 @@
         
     <Button
         android:id="@+id/buttonEquals"
+        style="@style/dropShadowBlack"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/linearLayout1"
         android:layout_marginBottom="3dp"
         android:layout_marginLeft="3dp"
         android:layout_marginRight="3dp"
         android:layout_marginTop="3dp"
         android:text="="
         android:textColor="#00FF00"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        tools:ignore="HardcodedText" />
         
     </GridLayout>
 </LinearLayout>

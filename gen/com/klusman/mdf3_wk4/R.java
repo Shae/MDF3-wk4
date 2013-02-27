@@ -18,7 +18,7 @@ public final class R {
         public static final int Divide=0x7f070012;
         public static final int Multi=0x7f070011;
         public static final int Sub=0x7f070010;
-        public static final int ansMainTxt=0x7f070015;
+        public static final int ansMainTxt=0x7f070016;
         public static final int btn0=0x7f07000c;
         public static final int btn1=0x7f070003;
         public static final int btn2=0x7f070004;
@@ -30,15 +30,16 @@ public final class R {
         public static final int btn8=0x7f07000a;
         public static final int btn9=0x7f07000b;
         public static final int btnClear=0x7f07000d;
-        public static final int buttonEquals=0x7f070014;
+        public static final int buttonEquals=0x7f070015;
         public static final int gridLayout1=0x7f070002;
         public static final int gridLayout2=0x7f07000e;
+        public static final int gridLayout3=0x7f070014;
         public static final int linearLayout1=0x7f070001;
         public static final int linearLayout2=0x7f070013;
-        public static final int menu_back=0x7f070018;
+        public static final int menu_back=0x7f07001a;
         public static final int menu_math=0x7f070019;
-        public static final int menu_settings=0x7f070017;
-        public static final int textOddEven=0x7f070016;
+        public static final int menu_settings=0x7f070018;
+        public static final int textOddEven=0x7f070017;
         public static final int webview=0x7f070000;
     }
     public static final class layout {
@@ -81,5 +82,8 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f050001;
+        public static final int dropShadowBlack=0x7f050002;
+        public static final int dropShadowGrey=0x7f050003;
+        public static final int dropShadowWhite=0x7f050004;
     }
 }
