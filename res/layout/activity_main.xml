@@ -12,17 +12,6 @@
         android:layout_width="fill_parent"
         android:layout_height="120dp" />
 
-    <!--
-         <TextView
-        android:id="@+id/textAnswer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/webview"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="21dp"
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-    -->
 
     <LinearLayout
         android:id="@+id/linearLayout1"

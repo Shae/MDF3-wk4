@@ -18,7 +18,6 @@
 		
 		
 			function runAct(){
-				document.myform.result.value = "HELLO";
 				Android.runAct();
 			}
 			
@@ -26,38 +25,6 @@
 				Android.toastMe();
 			}
 		
-			/* function add(){
-				var a = parseInt(document.myform.num_a.value);
-				var b = parseInt(document.myform.num_b.value);
-				var c = a + b;
-				document.myform.result.value = c;
-				Android.calcPlus(a,b);
-			}
-			
-			function sub(){
-				var a = parseInt(document.myform.num_a.value);
-				var b = parseInt(document.myform.num_b.value);
-				var c = a - b;
-				document.myform.result.value = c;
-				Android.calcSub(a,b);
-			}
-			
-			function multi(){
-				var a = parseInt(document.myform.num_a.value);
-				var b = parseInt(document.myform.num_b.value);
-				var c = a * b;
-				document.myform.result.value = c;
-				Android.calcMulti(a,b);
-			}
-			
-			function divide(){
-				var a = parseInt(document.myform.num_a.value);
-				var b = parseInt(document.myform.num_b.value);
-				var c = a / b;
-				document.myform.result.value = c;
-				Android.calcDivide(a,b);
-			} */
-			
 			function setReadout0(){
 				var a = document.myform.num_a.value;
 				if(a != null){
@@ -191,24 +158,25 @@
 				_b = document.myform.num_a.value;
 				A = parseInt(_a);
 				B = parseInt(_b);
+				var c;
 				if(_eType == "ADD"){
-					var c = A + B;
+					c = A + B;
 					document.myform.num_a.value = c;
 				}
 				if(_eType == "SUB"){
-					var c = A - B;
+					c = A - B;
 					document.myform.num_a.value = c;
 				}
 				if(_eType == "MULTI"){
-					var c = A * B;
+					c = A * B;
 					document.myform.num_a.value = c;
 				}
 				if(_eType == "DIVIDE"){
-					var c = A / B;
+					c = A / B;
 					document.myform.num_a.value = c;
 				}
 				
-				Android.runAct();
+				Android.runAct(c);
 				//runToast();
 			}
 			

@@ -261,56 +261,14 @@ public class MainActivity extends Activity {
 		    Toast.makeText(_context, toast, Toast.LENGTH_SHORT).show();
 		}
 		
-//		
-//		@JavascriptInterface
-//		public void calcPlus(int a, int b)
-//		{
-//			int A = a;
-//			int B = b;
-//			int C = A+B;
-//			String stringC = String.valueOf(C);
-//			showToast(stringC);
-//			
-//		}
-//		
-//		@JavascriptInterface
-//		public void calcSub(int a, int b)
-//		{
-//			int A = a;
-//			int B = b;
-//			int C = A-B;
-//			String stringC = String.valueOf(C);
-//			showToast(stringC);
-//		}
-//		
-//		@JavascriptInterface
-//		public void calcMulti(int a, int b)
-//		{
-//			int A = a;
-//			int B = b;
-//			int C = A*B;
-//			String stringC = String.valueOf(C);
-//			showToast(stringC);
-//		}
-//		
-//		@JavascriptInterface
-//		public void calcDivide(int a, int b)
-//		{
-//			int A = a;
-//			int B = b;
-//			double C = A/B;
-//			String stringC = String.valueOf(C);
-//			showToast(stringC);
-//		}
-		
 		@JavascriptInterface
-		public void runAct() {
-			toastMe();
+		public void runAct(String A) {
+			// Need to pass the Calc answer stil
 			Intent next = new Intent(_context, AnswerActivity.class);
-			//next.putExtra("ANSWER", answer);  
+			next.putExtra("EXTRA", A);  
 			startActivity(next);
-			
 		}
+		
 		@JavascriptInterface
 		public void toastMe(){
 			 Toast.makeText(_context, "BOOM BABY", Toast.LENGTH_SHORT).show();
